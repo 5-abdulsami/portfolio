@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdul Sami - Flutter & DevOps Engineer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body class="dark-theme">
+    <header>
+      <nav>
+        <div class="container">
+          <a href="#" class="logo">Abdul Sami</a>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="theme-switcher">
+            <button id="theme-toggle">
+              <i data-feather="moon" class="moon-icon"></i>
+              <i data-feather="sun" class="sun-icon" style="display: none"></i>
+            </button>
+          </div>
+          <div class="menu-icon">
+            <i data-feather="menu"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Abdul Sami</h1>
+            <h2>Flutter Developer | Cloud & DevOps Engineer</h2>
+            <p>
+              Building beautiful, high-performance mobile apps and engineering
+              scalable, resilient cloud infrastructure. Passionate about
+              creating seamless user experiences and robust backend systems.
+            </p>
+            <div class="hero-buttons">
+              <a href="#contact" class="btn btn-primary">Get in Touch</a>
+              <a
+                href="assets/Abdul Sami_Flutter_Resume.pdf"
+                class="btn btn-secondary"
+                download
+                >Flutter Resume</a
+              >
+              <a
+                href="assets/Abdul Sami_DevOps_Resume.pdf"
+                class="btn btn-secondary"
+                download
+                >DevOps Resume</a
+              >
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="assets/sami.png" alt="Abdul Sami" />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>
+          I’m a passionate developer skilled in Flutter and Cloud & DevOps,
+          driven to build seamless, scalable, and impactful digital products.
+          With a blend of creativity and technical depth in AWS, automation, and
+          modern development, I turn ideas into efficient, reliable, and
+          user-focused solutions. Always learning and optimizing, I love
+          crafting technology that truly makes a difference.
+        </p>
+      </section>
+
+      <section id="skills" class="container">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>
+              <i data-feather="smartphone"></i> Mobile Development (Flutter)
+            </h3>
+            <ul>
+              <li>Dart & Flutter Framework</li>
+              <li>AI-Powered & Generative AI Apps</li>
+              <li>
+                Machine Learning Integration (TFLite, Gemini, OpenAI APIs)
+              </li>
+              <li>
+                Firebase & Supabase (Auth, Firestore, Storage, Cloud Functions)
+              </li>
+              <li>State Management (Provider, GetX)</li>
+              <li>Backend Integration (Node.js, REST APIs, WebSockets)</li>
+              <li>Database Integration (MongoDB, SQL)</li>
+              <li>App Architecture (MVVM, Clean Architecture)</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3><i data-feather="cloud"></i> Cloud & DevOps</h3>
+            <ul>
+              <li>AWS (EC2, S3, VPC, IAM, DynamoDB, Lambda)</li>
+              <li>Docker & Kubernetes</li>
+              <li>Infrastructure as Code (Terraform, CloudFormation)</li>
+              <li>
+                CI/CD Pipelines (Jenkins, GitHub Actions, AWS CodePipeline)
+              </li>
+              <li>Version Control & Collaboration (Git, GitHub, GitLab)</li>
+              <li>Linux Administration & Networking</li>
+              <li>Full-Stack Development (Node.js, Express.js, MongoDB)</li>
+              <li>Bash & Python Scripting</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="container">
+        <h2>Experience</h2>
+        <div class="experience-container">
+          <div class="experience-item">
+            <h3>Full Stack Developer Intern</h3>
+            <p class="experience-company">Xgrid.co | Jul 2025 - Aug 2025</p>
+            <p>
+              Contributed to a MERN stack movie application, focusing on API
+              integration. Gained valuable experience by containerizing the
+              application with Docker and deploying it on AWS, bridging the gap
+              between development and operations.
+            </p>
+          </div>
+          <div class="experience-item">
+            <h3>Mobile App Developer Intern</h3>
+            <p class="experience-company">Mobologics | Dec 2024 - Mar 2025</p>
+            <p>
+              Developed a company website using Flutter Web and built a
+              cross-platform Employee Management App. Integrated Firebase
+              services, achieving high uptime and accurate attendance tracking.
+            </p>
+          </div>
+          <div class="experience-item">
+            <h3>Flutter Developer</h3>
+            <p class="experience-company">
+              Ten Bucks Solutions | Jul 2024 - Sep 2024
+            </p>
+            <p>
+              Created a versatile Invoice Maker App with multiple templates and
+              PDF generation capabilities. This significantly streamlined the
+              invoicing process for users.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="container">
+        <h2>Featured Projects</h2>
+        <div class="project-container">
+          <div class="project-card">
+            <div class="project-header">
+              <i data-feather="cpu"></i>
+              <h3>BotPal - AI Chatbot App</h3>
+            </div>
+            <p>
+              An AI-powered chatbot app built with Flutter that supports both
+              text and image inputs, leveraging the Gemini multimodal API and
+              Hive for local storage.
+            </p>
+            <a
+              href="https://github.com/5-abdulsami/flutter_chatbot_app"
+              target="_blank"
+              class="project-link"
+              >View on GitHub <i data-feather="arrow-right"></i
+            ></a>
+          </div>
+          <div class="project-card">
+            <div class="project-header">
+              <i data-feather="smartphone"></i>
+              <h3>LinkUp - Real-time Chat App</h3>
+            </div>
+            <p>
+              A real-time chat application built with Flutter and Firebase.
+              Features include real-time messaging, media sharing, and read
+              receipts, optimized for multiple concurrent users.
+            </p>
+            <a
+              href="https://github.com/5-abdulsami/chat_app"
+              target="_blank"
+              class="project-link"
+              >View on GitHub <i data-feather="arrow-right"></i
+            ></a>
+          </div>
+          <div class="project-card">
+            <div class="project-header">
+              <i data-feather="cloud-lightning"></i>
+              <h3>Employee Directory Web App - AWS</h3>
+            </div>
+            <p>
+              A cloud-native employee directory application built on AWS using
+              EC2, S3 for asset storage, and DynamoDB for a scalable, serverless
+              database.
+            </p>
+            <a
+              href="https://github.com/5-abdulsami"
+              target="_blank"
+              class="project-link"
+              >View on GitHub <i data-feather="arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <i data-feather="server"></i>
+              <h3>Web Server Configuration on EC2</h3>
+            </div>
+            <p>
+              Deployed and configured Apache and IIS web servers on both Linux
+              and Windows EC2 instances, implementing secure access and robust
+              networking with VPC and security groups.
+            </p>
+            <a
+              href="https://github.com/5-abdulsami"
+              target="_blank"
+              class="project-link"
+              >View on GitHub <i data-feather="arrow-right"></i
+            ></a>
+          </div>
+          <div class="project-card">
+            <div class="project-header">
+              <i data-feather="film"></i>
+              <h3>StreamFlix - Movie App</h3>
+            </div>
+            <p>
+              A full-stack movie web app built with the MERN
+              stack, containerized using Docker, featuring movie search,
+              details, and favorites — powered by the OMDb API and deployed on
+              AWS EC2.
+            </p>
+            <a
+              href="https://github.com/5-abdulsami/movie_app"
+              target="_blank"
+              class="project-link"
+              >View on GitHub <i data-feather="arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="certifications" class="container">
+        <h2>Certifications</h2>
+        <div class="certifications-container">
+          <div class="certification-item-2">
+            <img
+              src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~G2F8AGFCBX2S/CERTIFICATE_LANDING_PAGE~G2F8AGFCBX2S.jpeg"
+              alt="DevOps on AWS"
+            />
+            <h3>
+              <a
+                href="https://coursera.org/share/e431bddb0d35624f6025b17f50fe9a9e"
+                target="_blank"
+              >
+                DevOps on AWS (Specialization)
+              </a>
+            </h3>
+            <p>Coursera</p>
+          </div>
+
+          <div class="certification-item-1">
+            <img
+              src="https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+              alt="AWS Certified Solutions Architect - Associate"
+            />
+            <h3>
+              <a
+                href="https://www.credly.com/badges/c10771ff-1781-46bb-910e-f2edecb0b98e/public_url"
+                target="_blank"
+              >
+                AWS Certified Solutions Architect - Associate
+              </a>
+            </h3>
+          </div>
+
+          <div class="certification-item-3">
+            <img
+              src="https://www.datacamp.com/statement-of-accomplishment/badge/track/c4cd61602cd07d1bafa62fab12b35db2bcd78806.png"
+              alt="SQL for DBAs"
+            />
+            <h3>
+              <a
+                href="https://www.datacamp.com/completed/statement-of-accomplishment/track/c4cd61602cd07d1bafa62fab12b35db2bcd78806"
+                target="_blank"
+              >
+                SQL for DBAs (Skill Track)
+              </a>
+            </h3>
+            <p>DataCamp</p>
+          </div>
+        </div>
+      </section>
+
+      </section>
+
+        <section id="volunteering" class="container">
+            <h2>Volunteering</h2>
+            <div class="volunteering-container">
+                <div class="volunteer-card">
+                    <h3>Cloud Club Captain</h3>
+                    <p class="volunteer-org">AWS Cloud Club PIEAS | Feb 2025 - Present</p>
+                    <p>Leading a vibrant community to help students master AWS and cloud computing through engaging workshops, hands-on sessions, and expert talks.</p>
+                </div>
+                <div class="volunteer-card">
+                    <h3>App Development Lead</h3>
+                    <p class="volunteer-org">Google Developer Groups PIEAS | Sep 2024 - Present</p>
+                    <p>Conducted a nationwide 5-day Flutter Bootcamp for university students, teaching core concepts from UI development and state management to Firebase integration.</p>
+                </div>
+                <div class="volunteer-card">
+                    <h3>Graphics Co-Lead</h3>
+                    <p class="volunteer-org">Google Developer Student Club PIEAS | Sep 2023 - Jun 2024</p>
+                    <p>Led a team of designers in creating elegant visuals and graphics for numerous club events, technical sessions, and promotional campaigns.</p>
+                </div>
+            </div>
+        </section>
+
+      <section id="contact" class="container">
+        <h2>Get In Touch</h2>
+        <p>
+          I'm always open to discussing new projects, creative ideas, or
+          opportunities to be part of an amazing team. Feel free to reach out to
+          me.
+        </p>
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=5abdulsami2004@gmail.com"
+          target="_blank"
+          class="btn btn-primary"
+        >
+          Email Me
+        </a>
+
+        <div class="social-links">
+          <a href="https://github.com/5-abdulsami" target="_blank">
+            <i data-feather="github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/5abdul-sami/" target="_blank">
+            <i data-feather="linkedin"></i>
+          </a>
+
+          <a href="https://wa.me/923160816689" target="_blank">
+            <i data-feather="message-circle"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Abdul Sami. All Rights Reserved.</p>
+        <p>
+          <a href="mailto:5abdulsami2004@gmail.com" class="footer-email-link"
+            >5abdulsami2004@gmail.com</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
