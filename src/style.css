@@ -497,16 +497,29 @@ body.light-theme .project-link { color: var(--text-color-light); }
     text-align: center;
 }
 
-/* Certification Links */
+/* Certification Links & Titles */
 .certifications-container a {
-    color: var(--text-color, #fff); /* Use your theme text color or default white */
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
-.certifications-container a:hover {
-    color: var(--accent-color, #00bcd4); /* Optional hover effect */
+/* Default (dark theme assumed by body class) */
+body.dark-theme .certifications-container h3,
+body.dark-theme .certifications-container h3 a {
+    color: var(--text-color-dark);
+}
+body.dark-theme .certifications-container a:hover {
+    color: var(--primary-color-dark);
+}
+
+/* Light theme overrides */
+body.light-theme .certifications-container h3,
+body.light-theme .certifications-container h3 a {
+    color: var(--text-color-light);
+}
+body.light-theme .certifications-container a:hover {
+    color: var(--primary-color-light);
 }
 
 .certification-item-1 {
