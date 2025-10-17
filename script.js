@@ -1,59 +1,113 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Theme Switcher ---
-    const themeToggle = document.getElementById('theme-toggle');
+    // === THEME SWITCHER ===
+    const themeToggle = document.getElementById('modeToggle');
     const body = document.body;
-    const sunIcon = document.querySelector('.sun-icon');
-    const moonIcon = document.querySelector('.moon-icon');
 
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const savedTheme = localStorage.getItem('theme');
-
     if (savedTheme === 'light') {
-        body.classList.replace('dark-theme', 'light-theme');
-        sunIcon.style.display = 'block';
-        moonIcon.style.display = 'none';
-    } else if (savedTheme === 'dark') {
-         body.classList.replace('light-theme', 'dark-theme');
-         sunIcon.style.display = 'none';
-         moonIcon.style.display = 'block';
-    } else if (prefersDark) {
-        body.classList.add('dark-theme');
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'block';
-    } else {
         body.classList.add('light-theme');
-        sunIcon.style.display = 'block';
-        moonIcon.style.display = 'none';
+    } else {
+        body.classList.add('dark-theme');
     }
-
 
     themeToggle.addEventListener('click', () => {
         if (body.classList.contains('dark-theme')) {
             body.classList.replace('dark-theme', 'light-theme');
             localStorage.setItem('theme', 'light');
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
         } else {
             body.classList.replace('light-theme', 'dark-theme');
             localStorage.setItem('theme', 'dark');
-            sunIcon.style.display = 'none';
-            moonIcon.style.display = 'block';
         }
     });
 
+    // === PARTICLES ===
+    if (window.tsParticles) {
+        tsParticles.load('tsparticles', {
+            fullScreen: false,
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#3b82f6' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#3b82f6',
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    outModes: 'out'
+                }
+            },
+            interactivity: {
+                detectsOn: 'canvas',
+                events: {
+                    onHover: { enable: true, mode: 'grab' },
+                    onClick: { enable: true, mode: 'push' }
+                },
+                modes: {
+                    grab: { distance: 140, line_linked: { opacity: 0.5 } },
+                    push: { particles_nb: 4 }
+                }
+            }
+        });
+    }
 
-    // --- Header Scroll Effect ---
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+    // === TYPEWRITER EFFECT ===
+    const typewriterEl = document.getElementById('typewriter');
+    if (typewriterEl) {
+        const phrases = [
+            'Building scalable cloud solutions 🚀',
+            'Crafting beautiful Flutter apps 📱',
+            'AWS Certified Solutions Architect ☁️',
+            'Cloud & DevOps Engineer 🔧'
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const current = phrases[phraseIndex];
+            if (isDeleting) {
+                typewriterEl.textContent = current.substring(0, charIndex--);
+                if (charIndex < 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    setTimeout(type, 300);
+                    return;
+                }
+            } else {
+                typewriterEl.textContent = current.substring(0, charIndex++);
+                if (charIndex > current.length) {
+                    isDeleting = true;
+                    setTimeout(type, 1500);
+                    return;
+                }
+            }
+            setTimeout(type, isDeleting ? 30 : 60);
         }
-    });
-    
-    // --- Active Nav Link Highlighting ---
+        type();
+    }
+
+    // === AOS ANIMATIONS ===
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true,
+            offset: 100
+        });
+    }
+
+    // === ACTIVE NAV LINK ===
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -73,19 +127,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Mobile Menu Toggle ---
+    // === MOBILE MENU ===
     const menuIcon = document.querySelector('.menu-icon');
     const navLinksContainer = document.querySelector('.nav-links');
 
-    menuIcon.addEventListener('click', () => {
-        navLinksContainer.classList.toggle('active');
-    });
-    
-    // --- Close mobile menu on link click ---
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if(navLinksContainer.classList.contains('active')) {
-                navLinksContainer.classList.remove('active');
+    if (menuIcon && navLinksContainer) {
+        menuIcon.addEventListener('click', () => {
+            navLinksContainer.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinksContainer.classList.contains('active')) {
+                    navLinksContainer.classList.remove('active');
+                }
+            });
+        });
+    }
+
+    // === FOOTER YEAR ===
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+
+    // === SMOOTH SCROLL ===
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
