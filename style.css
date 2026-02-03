@@ -1,26 +1,14 @@
 :root {
-  /* --- AURA PALETTE --- */
   --bg: #050608;
-  /* Deep Void */
   --surface: rgba(255, 255, 255, 0.02);
   --text: #FFFFFF;
   --text-dim: #94a3b8;
-
-  /* The "Cold" Gradients */
   --accent: #00C6FF;
-  /* Electric Cyan */
   --accent2: #0072FF;
-  /* Royal Blue */
   --accent-glow: rgba(0, 198, 255, 0.4);
-  /* For shadow glows */
-
-  /* Glass Effects */
   --glass-bg: rgba(10, 15, 30, 0.6);
-  /* Darker, tinted glass */
   --glass-border: rgba(0, 198, 255, 0.15);
-  /* Subtle cyan tint on borders */
   --glass-shine: rgba(255, 255, 255, 0.05);
-
   --shadow: rgba(0, 0, 0, 0.5);
   --font-base: 'Inter', sans-serif;
   --font-display: 'Poppins', sans-serif;
@@ -53,7 +41,6 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   transition: background 0.3s, color 0.3s;
-  /* Subtle vignette for depth */
   background-image: radial-gradient(circle at 50% 0%, rgba(0, 198, 255, 0.08) 0%, transparent 50%);
 }
 
@@ -63,7 +50,6 @@ body {
   padding: 0 20px;
 }
 
-/* === NAV === */
 .nav {
   position: fixed;
   top: 0;
@@ -104,7 +90,6 @@ body {
   justify-content: center;
   overflow: hidden;
   box-shadow: 0 0 15px var(--accent-glow);
-  /* Glowing Logo */
 }
 
 .logo-img {
@@ -140,7 +125,6 @@ body {
 .nav-links a.active {
   color: var(--accent);
   text-shadow: 0 0 10px var(--accent-glow);
-  /* Glowing Text on Hover */
 }
 
 .nav-links a::after {
@@ -187,7 +171,6 @@ body {
   color: var(--text);
 }
 
-/* === HERO (AURA UPGRADE) === */
 #hero {
   min-height: 100vh;
   display: flex;
@@ -198,7 +181,6 @@ body {
   overflow: hidden;
 }
 
-/* The Ambient Aura Glow behind hero */
 #hero::before {
   content: '';
   position: absolute;
@@ -240,11 +222,9 @@ body {
   letter-spacing: -2px;
 }
 
-/* Gradient Text for Name */
 .hero-title {
   font-family: var(--font-display);
   font-size: 2rem;
-  /* Larger role title */
   font-weight: 700;
   margin-bottom: 24px;
   background: linear-gradient(135deg, var(--accent), #fff, var(--accent2));
@@ -252,7 +232,6 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   filter: drop-shadow(0 0 8px var(--accent-glow));
-  /* Text Neon Glow */
 }
 
 .subtitle {
@@ -283,7 +262,6 @@ body {
   margin-bottom: 60px;
 }
 
-/* === BUTTONS (ELEGANT & GLOWING) === */
 .btn {
   padding: 14px 32px;
   border-radius: 50px;
@@ -296,7 +274,6 @@ body {
   gap: 10px;
   position: relative;
   overflow: hidden;
-  /* Glass Button Default */
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--glass-border);
   color: var(--text);
@@ -320,7 +297,6 @@ body {
 
 .btn.primary:hover {
   box-shadow: 0 0 30px var(--accent-glow), 0 0 60px var(--accent-glow);
-  /* Intense Glow */
   transform: translateY(-3px) scale(1.02);
 }
 
@@ -350,7 +326,6 @@ body {
   }
 }
 
-/* === SECTIONS === */
 section {
   padding: 120px 20px;
   position: relative;
@@ -378,14 +353,12 @@ section {
   text-shadow: 0 0 10px var(--accent-glow);
 }
 
-/* === GLASS CARD SYSTEM === */
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  /* Top highlight */
   border-radius: 24px;
   padding: 40px;
   box-shadow: 0 8px 32px var(--shadow), inset 0 0 0 1px var(--glass-shine);
@@ -398,7 +371,6 @@ section {
   border-color: var(--accent);
 }
 
-/* === ABOUT === */
 .about-grid {
   display: grid;
   grid-template-columns: 350px 1fr;
@@ -410,12 +382,11 @@ section {
   position: relative;
 }
 
-/* Profile Glow */
 .profile::before {
   content: '';
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: -10px;
+  left: -10px;
   right: -10px;
   bottom: -10px;
   border: 2px solid var(--accent);
@@ -426,10 +397,6 @@ section {
 }
 
 .profile:hover::before {
-  top: 15px;
-  left: 15px;
-  right: -15px;
-  bottom: -15px;
   box-shadow: 0 0 20px var(--accent-glow);
 }
 
@@ -438,7 +405,6 @@ section {
   border-radius: 20px;
   display: block;
   filter: grayscale(20%);
-  /* Cool aesthetic */
   transition: filter 0.3s;
 }
 
@@ -470,7 +436,6 @@ section {
   box-shadow: 0 0 15px var(--accent-glow);
 }
 
-/* === TIMELINE === */
 .timeline {
   max-width: 800px;
   margin: 0 auto;
@@ -533,7 +498,6 @@ section {
   line-height: 1.7;
 }
 
-/* === PROJECTS (3D FLIP) === */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -611,7 +575,6 @@ section {
   color: var(--text-dim);
 }
 
-/* === SKILLS === */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -619,7 +582,6 @@ section {
 }
 
 .skill-category {
-  /* Removed float animation for cleaner look, added hover glow */
   padding: 24px;
   border-radius: 20px;
   transition: all 0.3s;
@@ -668,7 +630,6 @@ section {
   top: 12px;
 }
 
-/* === CERTS === */
 .certs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -735,7 +696,6 @@ section {
   box-shadow: 0 0 15px var(--accent-glow);
 }
 
-/* === CONTACT === */
 .contact-grid-single {
   display: flex;
   justify-content: center;
@@ -779,7 +739,6 @@ section {
   border-color: transparent;
 }
 
-/* === FOOTER === */
 footer {
   padding: 40px 20px;
   text-align: center;
@@ -804,7 +763,6 @@ footer p {
   text-shadow: 0 0 10px var(--accent-glow);
 }
 
-/* === EDUCATION === */
 .education-content {
   max-width: 900px;
   margin: 0 auto;
@@ -898,7 +856,6 @@ footer p {
   box-shadow: 0 0 10px var(--accent-glow);
 }
 
-/* === RESPONSIVE === */
 @media (max-width: 992px) {
   .nav-links {
     display: none;
@@ -933,7 +890,6 @@ footer p {
 
   .profile::before {
     display: none;
-    /* Simplify on mobile */
   }
 
   .skills-grid {

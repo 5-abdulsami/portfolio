@@ -1,40 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // === THEME SWITCHER ===
-    const themeToggle = document.getElementById('modeToggle');
-    const body = document.body;
-
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        body.classList.add('light-theme');
-    } else {
-        body.classList.add('dark-theme');
-    }
-
-    themeToggle.addEventListener('click', () => {
-        if (body.classList.contains('dark-theme')) {
-            body.classList.replace('dark-theme', 'light-theme');
-            localStorage.setItem('theme', 'light');
-        } else {
-            body.classList.replace('light-theme', 'dark-theme');
-            localStorage.setItem('theme', 'dark');
-        }
-    });
-
     // === PARTICLES ===
     if (window.tsParticles) {
         tsParticles.load('tsparticles', {
             fullScreen: false,
             particles: {
                 number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: '#3b82f6' },
+                color: { value: '#00C6FF' }, /* Updated to Cyan */
                 shape: { type: 'circle' },
                 opacity: { value: 0.3, random: true },
                 size: { value: 3, random: true },
                 line_linked: {
                     enable: true,
                     distance: 150,
-                    color: '#3b82f6',
+                    color: '#00C6FF', /* Updated to Cyan */
                     opacity: 0.2,
                     width: 1
                 },
@@ -136,7 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinksContainer.classList.toggle('active');
         });
 
-        navLinks.forEach(link => {
+        // Close menu when a link is clicked
+        const navLinksItems = document.querySelectorAll('.nav-links a');
+        navLinksItems.forEach(link => {
             link.addEventListener('click', () => {
                 if (navLinksContainer.classList.contains('active')) {
                     navLinksContainer.classList.remove('active');
