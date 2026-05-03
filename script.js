@@ -44,10 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const typewriterEl = document.getElementById('typewriter');
     if (typewriterEl) {
         const phrases = [
-            'Building scalable cloud solutions 🚀',
-            'Crafting beautiful Flutter apps 📱',
-            'AWS Certified Solutions Architect ☁️',
-            'Cloud & DevOps Engineer 🔧'
+            'Building scalable cloud solutions',
+            'Crafting beautiful Flutter apps',
+            'AWS Certified Solutions Architect',
+            'Cloud & DevOps Engineer'
         ];
         let phraseIndex = 0;
         let charIndex = 0;
