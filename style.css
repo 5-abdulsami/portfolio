@@ -327,48 +327,6 @@ section {
     margin-bottom: 16px;
 }
 
-/* Services/About Grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    background-color: var(--surface-color);
-    border: 1px solid var(--border-color);
-    padding: 40px;
-    border-radius: 24px;
-    transition: var(--transition);
-}
-
-.service-card:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-10px);
-}
-
-.service-icon {
-    font-size: 32px;
-    color: var(--primary-color);
-    margin-bottom: 24px;
-}
-
-.service-card h3 {
-    font-size: 24px;
-    margin-bottom: 16px;
-}
-
-.service-card p {
-    color: var(--secondary-color);
-    font-size: 15px;
-    margin-bottom: 24px;
-}
-
-.service-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
 
 .tag {
     background-color: var(--bg-color);
@@ -926,7 +884,7 @@ footer {
 /* Volunteering Section Grid */
 .volunteering-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 20px;
 }
