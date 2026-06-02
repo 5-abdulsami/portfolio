@@ -82,20 +82,30 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power2.out'
     });
 
-    // Timeline Items Reveal
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    timelineItems.forEach(item => {
-        gsap.from(item, {
+    // Experience Reveal
+    if (document.querySelector('.experience-layout')) {
+        gsap.from('.experience-visual', {
             scrollTrigger: {
-                trigger: item,
+                trigger: '.experience-layout',
                 start: 'top 85%',
             },
             opacity: 0,
-            x: -30,
-            duration: 1,
+            scale: 0.8,
+            duration: 1.2,
             ease: 'power2.out'
         });
-    });
+        
+        gsap.from('.experience-card', {
+            scrollTrigger: {
+                trigger: '.experience-layout',
+                start: 'top 80%',
+            },
+            opacity: 0,
+            y: 40,
+            duration: 1.2,
+            ease: 'power2.out'
+        });
+    }
 
 
 
