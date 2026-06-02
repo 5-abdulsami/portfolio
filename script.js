@@ -97,20 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Skill Progress Bars
-    const skillBars = document.querySelectorAll('.skill-progress');
-    skillBars.forEach(bar => {
-        const width = bar.getAttribute('data-width');
-        gsap.to(bar, {
-            scrollTrigger: {
-                trigger: bar,
-                start: 'top 90%',
-            },
-            width: width,
-            duration: 1.5,
-            ease: 'power2.out'
-        });
-    });
+
 
     // Project Cards Reveal
     gsap.from('.project-card', {
