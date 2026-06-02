@@ -43,9 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // === GSAP Animations ===
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Hero Animations
+    // === Hero Animations ===
     const heroTl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1 } });
     heroTl.from('.hero-tag', { opacity: 0, x: -30, delay: 0.5 })
           .from('.hero h1', { opacity: 0, y: 30, duration: 1.2 }, '-=0.8')
@@ -53,87 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
           .from('.hero-btns', { opacity: 0, y: 20 }, '-=0.8')
           .from('.hero-stats', { opacity: 0, y: 20 }, '-=0.8')
           .from('.hero-img-wrapper', { opacity: 0, scale: 0.9, duration: 1.5 }, '-=1.2');
-
-    // Section Headers Reveal
-    const sectionHeaders = document.querySelectorAll('.section-header');
-    sectionHeaders.forEach(header => {
-        gsap.from(header, {
-            scrollTrigger: {
-                trigger: header,
-                start: 'top 85%',
-            },
-            opacity: 0,
-            y: 30,
-            duration: 1,
-            ease: 'power2.out'
-        });
-    });
-
-    // Services Cards Reveal
-    gsap.from('.service-card', {
-        scrollTrigger: {
-            trigger: '.services-grid',
-            start: 'top 80%',
-        },
-        opacity: 0,
-        y: 40,
-        stagger: 0.2,
-        duration: 1,
-        ease: 'power2.out'
-    });
-
-    // Experience Reveal
-    if (document.querySelector('.experience-layout')) {
-        gsap.from('.experience-visual', {
-            scrollTrigger: {
-                trigger: '.experience-layout',
-                start: 'top 85%',
-            },
-            opacity: 0,
-            scale: 0.8,
-            duration: 1.2,
-            ease: 'power2.out'
-        });
-        
-        gsap.from('.experience-card', {
-            scrollTrigger: {
-                trigger: '.experience-layout',
-                start: 'top 80%',
-            },
-            opacity: 0,
-            y: 40,
-            duration: 1.2,
-            ease: 'power2.out'
-        });
-    }
-
-
-
-    // Project Cards Reveal
-    gsap.from('.project-card', {
-        scrollTrigger: {
-            trigger: '.projects-grid',
-            start: 'top 80%',
-        },
-        opacity: 0,
-        y: 50,
-        stagger: 0.3,
-        duration: 1,
-        ease: 'power2.out'
-    });
-
-    // Contact Grid Reveal
-    gsap.from('.contact-grid > div', {
-        scrollTrigger: {
-            trigger: '.contact-grid',
-            start: 'top 80%',
-        },
-        opacity: 0,
-        y: 40,
-        stagger: 0.3,
-        duration: 1,
-        ease: 'power2.out'
-    });
 
     // Smooth Scrolling for Nav Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
